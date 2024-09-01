@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GroupingSuite">
+	
+	<groups>
+		<run>
+			<include name="E2E"/>
+			<!--<include name="Unit"/> -->
+			<!-- <include name="Master"/>-->
+			<!-- <exclude name="Sanity"/>-->
+			<!--<exclude name="Regression"/> -->
+			<!-- <exclude name="Master"/>-->
+		</run>
+	</groups>
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager"></listener>
+	</listeners>
+	
+  <test  name="GroupingTest">
+   <parameter name="os" value="Windows"></parameter>
+   <parameter name="browser" value="chrome"></parameter>
+ 
+    <classes>
+       <class name="testCases.TC_001_AccountRegisterTest"/>
+       <class name="testCases.TC_003_LoginTest"/>
+       <class name="testCases.TC_008_CartPageTest"/>
+       <class name="testCases.TC_009_CheckoutPageTest"/>
+       <class name="testCases.TC_0010_ConfirmOrderPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
