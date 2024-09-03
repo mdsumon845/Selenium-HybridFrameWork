@@ -81,23 +81,3 @@ public class TC_0011_EndToEndTest  extends BaseClass {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-//hp.hoverMyAccount();
-//hp.clickLogin();
-//LoginPage lp=new LoginPage(driver);
-//lp.SetEmail(p.getProperty("email"));
-//lp.SetPassword(p.getProperty("password"));
-//lp.clickLogin();
-////myAccountPage
-//logger.info("***Validating target page ...");
-//MyAccountPage mypage=new MyAccountPage(driver);
-//boolean targetPage=mypage.isMyAccountPageExists();
-//myassert.assertTrue(targetPage);
