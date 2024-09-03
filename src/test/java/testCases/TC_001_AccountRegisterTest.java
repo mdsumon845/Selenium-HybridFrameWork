@@ -7,7 +7,7 @@ import pageObjects.RegistrationPage;
 import testBase.BaseClass;
 
 public class TC_001_AccountRegisterTest  extends BaseClass{
-	@Test(priority=1,groups= {"Regression","Master","E2E"})
+	@Test(priority=1,groups= {"Regression","Master"})
 	public void createAccount() 
 	{
 		logger.info("***TC_001_Account Registration has started...");
@@ -21,13 +21,13 @@ public class TC_001_AccountRegisterTest  extends BaseClass{
 			RegistrationPage register=new RegistrationPage(driver);
 			register.SetFirstName(randomString().toLowerCase());
 			register.SetlastName(randomString().toLowerCase());
-			register.SetEmail(randomAlphaNumeric2()+"@gmail.com");
-			register.SetTelephone(randomNumber());
-			String password=randomAlphaNumeric();
+			register.SetEmail(email()+"@gmail.com");
+			register.SetTelephone(tel());
+			String password=pwd();
 			register.SetPassword(password);
 			register.SetConfirmPassword(password);
-			register.SetSubscribe();
-			register.SetPrivacy();
+			register.selectSubscribe();
+			register.selectPrivacy();
 			register.clickContinue();	
 			logger.info("***Validating expected message ...");
 			Assert.assertEquals(register.getConfirmationMessage(), "Your Account Has Been Created!");

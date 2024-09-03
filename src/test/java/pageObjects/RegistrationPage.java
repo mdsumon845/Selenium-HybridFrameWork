@@ -55,12 +55,12 @@ public class RegistrationPage extends BasePage{
 		txtConfirmPassword.sendKeys(pwd);
 	}
 	
-	public void SetSubscribe() 
+	public void selectSubscribe() 
 	{
 		radioBtnSubscribe.click();
 	}
 	
-	public void SetPrivacy() 
+	public void selectPrivacy() 
 	{
 		checkboxPrivacyPolicy.click();
 	}

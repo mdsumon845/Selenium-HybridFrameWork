@@ -92,7 +92,7 @@ public class BaseClass {
 		 driver.manage().window().maximize();	  
 	 }
  
-	 @AfterClass(groups= {"Sanity","Regression","Master"})
+	 @AfterClass(groups= {"Sanity","Regression","Master","E2E"})
 	 public void tearDown() 
 	 {
 		 driver.close();
@@ -110,15 +110,21 @@ public class BaseClass {
 		String generatedNumber= RandomStringUtils.randomNumeric(11);
 		return generatedNumber ;	 
 	 }
+	 public String tel() 
+	 {
+		String generatedNumber= RandomStringUtils.randomNumeric(11);
+		return generatedNumber ;	 
+	 }
 	 
-	 public String randomAlphaNumeric() 
+	 
+	 public String pwd() 
 	 {
 		 String str= RandomStringUtils.randomAlphabetic(5);
 		String num= RandomStringUtils.randomNumeric(3);
 		return (str+"@"+num); 
 	 }
 	 
-	 public String randomAlphaNumeric2() 
+	 public String email() 
 	 {
 		 String str= RandomStringUtils.randomAlphabetic(5);
 		String num= RandomStringUtils.randomNumeric(3);
@@ -154,7 +160,19 @@ public class BaseClass {
 		return (num1+"-"+num2);		 
 	 }
 	 
-	 public String name() 
+	 public String firstname() 
+	 {
+		String generatedString= RandomStringUtils.randomAlphabetic(15);
+		return generatedString ;	 
+	 }
+	 
+	 public String lastName() 
+	 {
+		String generatedString= RandomStringUtils.randomAlphabetic(15);
+		return generatedString ;	 
+	 }
+	 
+	 public String fullName() 
 	 {
 		String generatedString= RandomStringUtils.randomAlphabetic(15);
 		return generatedString ;	 
@@ -169,6 +187,12 @@ public class BaseClass {
 	 public String comment() 
 	 {
 		String generatedString= RandomStringUtils.randomAlphabetic(200);
+		return generatedString ;	 
+	 }
+	 
+	 public String CompanyName() 
+	 {
+		String generatedString= RandomStringUtils.randomAlphabetic(15);
 		return generatedString ;	 
 	 }
 	 

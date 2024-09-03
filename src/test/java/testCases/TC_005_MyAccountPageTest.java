@@ -23,20 +23,20 @@ public class TC_005_MyAccountPageTest extends BaseClass{
 			hp.hoverMyAccount();
 			//register
 			hp.clickRegister();
-			
+
 			RegistrationPage register=new RegistrationPage(driver);
 			logger.info("***fillout register form...");
 			register.SetFirstName(randomString().toLowerCase());
 			register.SetlastName(randomString().toLowerCase());
-			register.SetEmail(randomAlphaNumeric2()+"@gmail.com");
-			register.SetTelephone(randomNumber());
-			String password=randomAlphaNumeric();
+			register.SetEmail(email()+"@gmail.com");
+			register.SetTelephone(tel());
+			String password=pwd();
 			register.SetPassword(password);
 			register.SetConfirmPassword(password);
-			register.SetSubscribe();
-			register.SetPrivacy();
+			register.selectSubscribe();
+			register.selectPrivacy();
 			register.clickContinue();	
-			
+
 			//myAccountPage
 			MyAccountPage mypage=new MyAccountPage(driver);
 			mypage.editBtnClick();
@@ -45,11 +45,11 @@ public class TC_005_MyAccountPageTest extends BaseClass{
 			mypage.clearLastName();
 			mypage.setLastName(randomString());
 			mypage.clearEmail();
-			mypage.setEmail(randomAlphaNumeric2()+"@gmail.com");
+			mypage.setEmail(email()+"@gmail.com");
 			mypage.clearTelNum();
-			mypage.setTelePhoneNum(randomNumber());
+			mypage.setTelePhoneNum(tel());
 			mypage.clickContinueBtn();
-			
+
 			logger.info("***verifying expected message...");
 			boolean targetPage=mypage.getEditInfoConfirmationMessage();
 			Assert.assertTrue(targetPage);	
@@ -61,16 +61,16 @@ public class TC_005_MyAccountPageTest extends BaseClass{
 			logger.debug("Debug logs...");
 			Assert.fail();	
 		}
-		
+
 		finally 
 		{
 			logger.info("***EditAccountInfo test has finished...");
 		}	
 	}
-	
-	
+
+
 	@Test(priority=2,groups= {"Sanity","Master"})
-	
+
 	public void changePassword() 
 	{
 		logger.info("***Change password test has started...");
@@ -81,28 +81,28 @@ public class TC_005_MyAccountPageTest extends BaseClass{
 			hp.hoverMyAccount();
 			//register
 			hp.clickRegister();
-			
+
 			RegistrationPage register=new RegistrationPage(driver);
 			logger.info("***fillout register form...");
 			register.SetFirstName(randomString().toLowerCase());
 			register.SetlastName(randomString().toLowerCase());
-			register.SetEmail(randomAlphaNumeric2()+"@gmail.com");
-			register.SetTelephone(randomNumber());
-			String password=randomAlphaNumeric();
+			register.SetEmail(email()+"@gmail.com");
+			register.SetTelephone(tel());
+			String password=pwd();
 			register.SetPassword(password);
 			register.SetConfirmPassword(password);
-			register.SetSubscribe();
-			register.SetPrivacy();
+			register.selectSubscribe();
+			register.selectPrivacy();
 			register.clickContinue();	
-			
+
 			//myAccountPage
 			MyAccountPage mypage=new MyAccountPage(driver);
 			mypage.clickPasswordLink();
-			String pass=randomAlphaNumeric();
+			String pass=pwd();
 			mypage.setPassword(pass);
 			mypage.setConfirmPassword(pass);
 			mypage.clickContinueBtn();
-			
+
 			logger.info("***verifying confirmation message...");
 			boolean confirmMgs=mypage.getPasswordConfirmationMessage();
 			Assert.assertTrue(confirmMgs);	
@@ -114,14 +114,14 @@ public class TC_005_MyAccountPageTest extends BaseClass{
 			logger.debug("Debug logs...");
 			Assert.fail();
 		}
-		
+
 		finally 
 		{
 			logger.info("***Change Password test has finished...");
 		}	
 	}
-	
-	
+
+
 	@Test(priority=3,groups= {"Sanity","Master"})
 	public void setAddressBook() 
 	{
@@ -133,20 +133,20 @@ public class TC_005_MyAccountPageTest extends BaseClass{
 			hp.hoverMyAccount();
 			//register
 			hp.clickRegister();
-			
+
 			RegistrationPage register=new RegistrationPage(driver);
 			logger.info("***fillout register form...");
 			register.SetFirstName(randomString().toLowerCase());
 			register.SetlastName(randomString().toLowerCase());
-			register.SetEmail(randomAlphaNumeric2()+"@gmail.com");
-			register.SetTelephone(randomNumber());
-			String password=randomAlphaNumeric();
+			register.SetEmail(email()+"@gmail.com");
+			register.SetTelephone(tel());
+			String password=pwd();
 			register.SetPassword(password);
 			register.SetConfirmPassword(password);
-			register.SetSubscribe();
-			register.SetPrivacy();
+			register.selectSubscribe();
+			register.selectPrivacy();
 			register.clickContinue();	
-			
+
 			//myAccountPage
 			MyAccountPage mypage=new MyAccountPage(driver);
 			mypage.clickAddressBookLink();
@@ -162,106 +162,106 @@ public class TC_005_MyAccountPageTest extends BaseClass{
 			mypage.selectState();
 			mypage.clickDefaultAddress();
 			mypage.clickContinueBtn();
-			
+
 		} catch(Exception e) 
 		{
 			Assert.fail();
 		}
-		
+
 		finally 
 		{
 			logger.info("***setAddress book test has finished...");	
 		}
 	}
-	
-	
+
+
 	@Test(priority=4,groups= {"Sanity","Master"})
 	public void verifySubscriptionInfo() 
 	{
 		logger.info("***verifySubscriptionInfo has started...");
 		try {
-			
-				//homePage
-				HomePage hp=new HomePage(driver);
-				hp.hoverMyAccount();
-				//register
-				hp.clickRegister();
-				
-				RegistrationPage register=new RegistrationPage(driver);
-				logger.info("***fillout register form...");
-				register.SetFirstName(randomString().toLowerCase());
-				register.SetlastName(randomString().toLowerCase());
-				register.SetEmail(randomAlphaNumeric2()+"@gmail.com");
-				register.SetTelephone(randomNumber());
-				String password=randomAlphaNumeric();
-				register.SetPassword(password);
-				register.SetConfirmPassword(password);
-				register.SetSubscribe();
-				register.SetPrivacy();
-				register.clickContinue();	
-				//myAccount page
-				MyAccountPage mypage=new MyAccountPage(driver);
-				mypage.clickSubscriptionBtn();
-				mypage.clickYesSubscritionBtn();
-				mypage.clickContinueBtn();
-				logger.info("***Validating confirmation message ...");
-				boolean confirmationMgs=mypage.getSubscriptionConfirmationMgs();
-				Assert.assertTrue(confirmationMgs);
+
+			//homePage
+			HomePage hp=new HomePage(driver);
+			hp.hoverMyAccount();
+			//register
+			hp.clickRegister();
+
+			RegistrationPage register=new RegistrationPage(driver);
+			logger.info("***fillout register form...");
+			register.SetFirstName(randomString().toLowerCase());
+			register.SetlastName(randomString().toLowerCase());
+			register.SetEmail(email()+"@gmail.com");
+			register.SetTelephone(randomNumber());
+			String password=pwd();
+			register.SetPassword(password);
+			register.SetConfirmPassword(password);
+			register.selectSubscribe();
+			register.selectPrivacy();
+			register.clickContinue();	
+			//myAccount page
+			MyAccountPage mypage=new MyAccountPage(driver);
+			mypage.clickSubscriptionBtn();
+			mypage.clickYesSubscritionBtn();
+			mypage.clickContinueBtn();
+			logger.info("***Validating confirmation message ...");
+			boolean confirmationMgs=mypage.getSubscriptionConfirmationMgs();
+			Assert.assertTrue(confirmationMgs);
 		}
 		catch(Exception e) {
 			Assert.fail();
 		}
-		
+
 		finally 
 		{
 			logger.info("***verifySubscriptionInfo has finished...");
 		}	
 	}
 
-	
+
 	@Test(priority=5,groups= {"Sanity","Master"})
-	
+
 	public void verifyLogout() 
 	{
 		logger.info("***verifyLogout has started...");
 		try {
-					
-				//homePage
-				HomePage hp=new HomePage(driver);
-				hp.hoverMyAccount();
-				//register
-				hp.clickRegister();
-				
-				RegistrationPage register=new RegistrationPage(driver);
-				logger.info("***fillout register form...");
-				register.SetFirstName(randomString().toLowerCase());
-				register.SetlastName(randomString().toLowerCase());
-				register.SetEmail(randomAlphaNumeric2()+"@gmail.com");
-				register.SetTelephone(randomNumber());
-				String password=randomAlphaNumeric();
-				register.SetPassword(password);
-				register.SetConfirmPassword(password);
-				register.SetSubscribe();
-				register.SetPrivacy();
-				register.clickContinue();	
-				//myAccount page
-				MyAccountPage mypage=new MyAccountPage(driver);
-				mypage.clickLogout();
-				logger.info("***Validating confirmation message ...");
-				boolean confirmationMgs=mypage.getLogoutConfirmationMgs();
-				Assert.assertEquals(confirmationMgs, true);
-			}
-			catch(Exception e) {
-				Assert.fail();
-			}
-		
-			finally 
-			{
-				logger.info("***verifyLogout has finished...");
-			}	
+
+			//homePage
+			HomePage hp=new HomePage(driver);
+			hp.hoverMyAccount();
+			//register
+			hp.clickRegister();
+
+			RegistrationPage register=new RegistrationPage(driver);
+			logger.info("***fillout register form...");
+			register.SetFirstName(randomString().toLowerCase());
+			register.SetlastName(randomString().toLowerCase());
+			register.SetEmail(email()+"@gmail.com");
+			register.SetTelephone(tel());
+			String password=pwd();
+			register.SetPassword(password);
+			register.SetConfirmPassword(password);
+			register.selectSubscribe();
+			register.selectPrivacy();
+			register.clickContinue();	
+			//myAccount page
+			MyAccountPage mypage=new MyAccountPage(driver);
+			mypage.clickLogout();
+			logger.info("***Validating confirmation message ...");
+			boolean confirmationMgs=mypage.getLogoutConfirmationMgs();
+			Assert.assertEquals(confirmationMgs, true);
+		}
+		catch(Exception e) {
+			Assert.fail();
+		}
+
+		finally 
+		{
+			logger.info("***verifyLogout has finished...");
+		}	
 	}
-	
-	
+
+
 	@Test(priority=6,groups= {"Sanity","Master"})
 	public void createAffiliateAccount() throws Exception 
 	{
@@ -273,18 +273,18 @@ public class TC_005_MyAccountPageTest extends BaseClass{
 			hp.hoverMyAccount();
 			//register
 			hp.clickRegister();
-			
+
 			RegistrationPage register=new RegistrationPage(driver);
-				logger.info("***fillout register form...");
+			logger.info("***fillout register form...");
 			register.SetFirstName(randomString().toLowerCase());
 			register.SetlastName(randomString().toLowerCase());
-			register.SetEmail(randomAlphaNumeric2()+"@gmail.com");
-			register.SetTelephone(randomNumber());
-			String password=randomAlphaNumeric();
+			register.SetEmail(email()+"@gmail.com");
+			register.SetTelephone(tel());
+			String password=pwd();
 			register.SetPassword(password);
 			register.SetConfirmPassword(password);
-			register.SetSubscribe();
-			register.SetPrivacy();
+			register.selectSubscribe();
+			register.selectPrivacy();
 			register.clickContinue();	
 			//myAccount page
 			MyAccountPage mypage=new MyAccountPage(driver);
@@ -292,7 +292,7 @@ public class TC_005_MyAccountPageTest extends BaseClass{
 			mypage.clickAffiliateAccountLink();
 			mypage.setCompanyName(randomString());
 			mypage.setWebSite(randomString());
-			mypage.setTaxID(randomNumber() );
+			mypage.setTaxID(randomNumber());
 			mypage.clickBankTransfer();
 			mypage.setBankName(randomString());
 			mypage.setBranchNumber(randomNumber());
@@ -308,7 +308,7 @@ public class TC_005_MyAccountPageTest extends BaseClass{
 		{
 			Assert.fail();
 		}
-		
+
 		finally 
 		{
 			logger.info("***createAffiliateAccount test has finished...");	

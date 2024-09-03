@@ -9,7 +9,7 @@ import pageObjects.MyAccountPage;
 import testBase.BaseClass;
 
 public class TC_003_LoginTest extends BaseClass{
-	@Test(priority=2,groups={"Sanity","Master","E2E"})
+	@Test(priority=2,groups={"Sanity","Master"})
 	public void verify_Login() 
 	{
 		logger.info("***TC_003_Login test has started...");
@@ -35,7 +35,7 @@ public class TC_003_LoginTest extends BaseClass{
 			logger.debug("Debug logs...");
 			Assert.fail();
 		}
-		
+
 		finally 
 		{
 			logger.info("***TC_003_Login test has finished...");

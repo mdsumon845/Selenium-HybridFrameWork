@@ -15,7 +15,7 @@ public class CheckoutPage  extends BasePage{
 	//locators
 	@FindBy(xpath="//input[@id='input-payment-firstname']") WebElement txtfirstName;
 	@FindBy(xpath="//input[@id='input-payment-lastname']") WebElement txtlastName;
-	@FindBy(xpath="//input[@id='input-payment-company']']") WebElement txtComapnyName;
+	@FindBy(xpath="//input[@name='company']") WebElement txtComapanyName;
 	@FindBy(xpath="//input[@id='input-payment-address-1']") WebElement txtAddress1;
 	@FindBy(xpath="//input[@id='input-payment-address-2']") WebElement txtAddress2;
 	@FindBy(xpath="//input[@id='input-payment-city']") WebElement txtCity;
@@ -36,11 +36,11 @@ public class CheckoutPage  extends BasePage{
 	
 	public void setLastName(String lastName) 
 	{
-		txtfirstName.sendKeys(lastName);
+		txtlastName.sendKeys(lastName);
 	}
 	public void setCompanyName(String com) 
 	{
-		txtComapnyName.sendKeys(com);
+		txtComapanyName.sendKeys(com);
 	}
 
 	public void setAddress1(String add1) 
@@ -82,7 +82,7 @@ public class CheckoutPage  extends BasePage{
 		textareaComment.sendKeys(comment);
 	}
 	
-	public void checkAgree() 
+	public void selectTermsAndConditions() 
 	{
 		checkAgree.click();
 	}

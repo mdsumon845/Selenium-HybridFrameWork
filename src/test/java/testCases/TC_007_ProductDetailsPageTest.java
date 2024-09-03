@@ -10,7 +10,7 @@ import testBase.BaseClass;
 
 public class TC_007_ProductDetailsPageTest extends BaseClass {
 	@Test(priority=1,groups={"Smoke","Master"})
-	
+
 	public void verifyProductDetailsPage() throws Exception 
 	{
 		logger.info("***Product Details page verify has started...");
@@ -33,17 +33,17 @@ public class TC_007_ProductDetailsPageTest extends BaseClass {
 			logger.debug("Debug logs...");
 			Assert.fail();
 		}
-		
+
 		finally 
 		{
 			logger.info("***Product Details page verify has finished...");
 		}	
 	}	
-	
-	
-	
+
+
+
 	@Test(priority=2,groups= {"Sanity","Master"})
-			
+
 	public void verifyReviewForm() 
 	{
 		logger.info("***Review form  test has started...");
@@ -58,7 +58,7 @@ public class TC_007_ProductDetailsPageTest extends BaseClass {
 			//product details page review form
 			ProductDetailsPage pdp=new ProductDetailsPage(driver);
 			pdp.setStarLabel();
-			pdp.setName(name());
+			pdp.setName(fullName());
 			pdp.setReview(review());
 			pdp.clickReview();
 			logger.info("***verifying expected Message...");
@@ -70,7 +70,7 @@ public class TC_007_ProductDetailsPageTest extends BaseClass {
 			logger.debug("Debug logs...");
 			Assert.fail();
 		}
-		
+
 		finally 
 		{
 			logger.info("***Review form  test has finished...");

@@ -27,9 +27,9 @@ public class TC_002_HomePageTest extends BaseClass {
 			logger.info("***Logo display test has finished...");
 		}
 	}
-	
+
 	@Test(priority=2,groups= {"Unit","Master"})
-	
+
 	public void verifySearchBarIsPresence() 
 	{
 		logger.info("***searchBar verify has started...");
@@ -51,8 +51,8 @@ public class TC_002_HomePageTest extends BaseClass {
 			logger.info("***searchBar verify has finished...");
 		}	
 	}
-	
-	
+
+
 	@Test(priority=3,groups= {"Unit","Master"})
 	public void verifySearchBarIsEnable() 
 	{
@@ -70,16 +70,16 @@ public class TC_002_HomePageTest extends BaseClass {
 			logger.debug("Debug logs...");
 			Assert.fail();
 		}
-		
+
 		finally 
 		{
 			logger.info("***searchBarEnablity verify has finished...");
 		}	
 	}
-	
-	
+
+
 	@Test(priority=4,groups= {"Unit","Master"})
-	
+
 	public void verifyCategoryList() 
 	{
 		logger.info("*** Category list varify has started...");
@@ -95,7 +95,7 @@ public class TC_002_HomePageTest extends BaseClass {
 			logger.debug("Debug logs...");
 			Assert.fail();
 		}
-		
+
 		finally 
 		{
 			logger.info("***Category list varify has finished...");

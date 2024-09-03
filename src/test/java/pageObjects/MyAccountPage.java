@@ -16,7 +16,11 @@ public class MyAccountPage extends BasePage {
 
 	//locators
 	@FindBy(xpath="//h2[normalize-space()='My Account']") WebElement mgsHeading;
+	@FindBy(xpath="//a[text()='Continue']") WebElement btnClickContinueAfterRegister;
+	
 	@FindBy(xpath="(//a[normalize-space()='Logout'])[2]") WebElement btnLogout;
+	@FindBy(xpath="//a[text()='Continue']") WebElement btnContinueAfterLogout;
+	
 	@FindBy(xpath="//a[normalize-space()='Edit Account']") WebElement btnEditAccount;
 	@FindBy(xpath="//input[@id='input-firstname']") WebElement txtFirstName;
 	@FindBy(xpath="//input[@id='input-lastname']") WebElement txtLastName;
@@ -67,6 +71,10 @@ public class MyAccountPage extends BasePage {
 		}
 	}
 
+	public void ClickContinueAfterRegister() 
+	{
+		btnClickContinueAfterRegister.click();
+	}
 	public void editBtnClick() 
 	{
 		btnEditAccount.click();
@@ -93,6 +101,10 @@ public class MyAccountPage extends BasePage {
 		txtTel.sendKeys(Tel);
 	}
 
+	public void clickContinueAfterLogout() 
+	{
+		btnContinueAfterLogout.click();
+	}
 	public void clickContinueBtn() 
 	{
 		btnContinue.click();

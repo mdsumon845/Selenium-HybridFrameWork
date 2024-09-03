@@ -21,7 +21,7 @@ public class TC_008_CartPageTest extends BaseClass{
 			//Cart page
 			CartPage cartPage=new CartPage(driver);
 			cartPage.verifyProductsForAddingIntoCart();
-			
+
 		} catch(Exception e) 
 		{
 			logger.error(("Test is failed")+e.getMessage());
@@ -34,9 +34,9 @@ public class TC_008_CartPageTest extends BaseClass{
 		}			
 	}
 
-	
-	@Test(priority=3,groups={"Smoke","Master","E2E"})
-	
+
+	@Test(priority=3,groups={"Smoke","Master"})
+
 	public void addingProductToCart() 
 	{
 		logger.info("***Adding product to the Cart has started...");
@@ -49,14 +49,14 @@ public class TC_008_CartPageTest extends BaseClass{
 			CartPage cartPage=new CartPage(driver);
 			cartPage.addProductToCart();
 			cartPage.clickCheckout();
-			
+
 		} catch(Exception e) 
 		{
 			logger.error(("Test is failed")+e.getMessage());
 			logger.debug("Debug logs...");
 			Assert.fail();	
 		}
-		
+
 		finally 
 		{
 			logger.info("***Adding product to the Cart has finished...");
