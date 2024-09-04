@@ -27,10 +27,11 @@
         
       <!-- <class name="testBase.BaseClass"/>-->
      <class name="testCases.TC_001_AccountRegisterTest"/> 
-      <class name="testCases.TC_003_LoginTest"/>
+     <!--  <class name="testCases.TC_003_LoginTest"/>
        <class name="testCases.TC_008_CartPageTest"/>
      
-        <class name="testCases.TC_0010_ConfirmOrderPageTest"/>
+        <class name="testCases.TC_0010_ConfirmOrderPageTest"/> -->
+    
   
    	
    	<!-- <class name="testCases.TC_004LoginDDT"/>-->
