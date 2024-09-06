@@ -92,11 +92,11 @@ public class BaseClass {
 		 driver.manage().window().maximize();	  
 	 }
  
-	 @AfterClass(groups= {"Sanity","Regression","Master","E2E"})
-	 public void tearDown() 
-	 {
-		 driver.close();
-	 }
+//	 @AfterClass(groups= {"Sanity","Regression","Master","E2E"})
+//	 public void tearDown() 
+//	 {
+//		 driver.close();
+//	 }
 	
 	 //these user defined mehthods are created for generating random String,number,email,password
 	 public String randomString() 

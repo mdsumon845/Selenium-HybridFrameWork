@@ -25,6 +25,8 @@ public class HomePage extends BasePage{
 	@FindBy(xpath="(//div[@class='dropdown-menu dropdown-menu-left'])[1]//a") List<WebElement> linkCategoryListsDisplay;
 	
 	
+	
+	
 	public boolean logoPresence() 
 	{
 		return logo.isDisplayed();
@@ -60,6 +62,10 @@ public class HomePage extends BasePage{
 	}
 	
 	
+	public void clickSearchBtn() 
+	{
+		btnSearch.click();	
+	}
 	public int categoryList() 
 	{
 		try
