@@ -14,6 +14,7 @@ public class HomePage extends BasePage{
 		super(driver);
 	}
 	
+	//locators
 	@FindBy(xpath="(//span[normalize-space()='My account'])[2]") WebElement myAccount;
 	@FindBy(xpath="//span[normalize-space()='Register']") WebElement registerLink;
 	@FindBy(xpath="//img[@alt='Poco Electro']") WebElement logo;
@@ -26,7 +27,7 @@ public class HomePage extends BasePage{
 	
 	
 	
-	
+	//action method
 	public boolean logoPresence() 
 	{
 		return logo.isDisplayed();

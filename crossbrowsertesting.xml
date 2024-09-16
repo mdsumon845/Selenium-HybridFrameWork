@@ -9,8 +9,7 @@
 	  <parameter name="os" value="Windows"></parameter> 
 	  <parameter name="browser" value="chrome"></parameter>
 	<classes>
-	  <class name="testCases.TC_002HomePageTest"/>
-	  <class name="testBase.BaseClass"/>
+	
 	  <class name="testCases.TC_001_AccountRegisterTest"/>
 	</classes>
   </test> <!-- ParallelTest -->
@@ -19,8 +18,8 @@
 	  <parameter name="os" value="Windows"></parameter> 
 	  <parameter name="browser" value="edge"></parameter>
     <classes>
-      <class name="testCases.TC_002HomePageTest"/>
-      <class name="testBase.BaseClass"/>
+    
+     
       <class name="testCases.TC_001_AccountRegisterTest"/>
     </classes>
   </test> <!-- ParallelTest -->
@@ -29,8 +28,7 @@
 	  <parameter name="os" value="Windows"></parameter> 
 	  <parameter name="browser" value="firefox"></parameter>
 	    <classes>
-	      <class name="testCases.TC_002HomePageTest"/>
-	      <class name="testBase.BaseClass"/>
+	     
 	      <class name="testCases.TC_001_AccountRegisterTest"/>
 	    </classes>
   </test> <!-- ParallelTest -->

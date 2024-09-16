@@ -22,10 +22,11 @@
          <class name="testCases.TC_001_AccountRegisterTest"/>
       -->  
       <!-- <class name="testBase.BaseClass"/>-->
-    <!-- <class name="testCases.TC_001_AccountRegisterTest"/> --> 
-     <!-- <class name="testCases.TC_003_LoginTest"/>-->
+    <!--<class name="testCases.TC_0013_RemovingProductFromCartPage"/> --> 
+   
      
-      	 <class name="testCases.TC_009_ProductAdvanceSearchTest"/>
+      <class name="testCases.TC_0012_ProductSearchPaginationFuntionalityTest"/> 
+      
     
    	<!-- <class name="testCases.TC_004LoginDDT"/>-->
     </classes>

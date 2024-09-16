@@ -28,7 +28,7 @@ public class LoginPage extends BasePage {
 		textpwd.sendKeys(pwd);	
 	}
 	
-	public void clickLogin() 
+	public void clickLoginBtn() 
 	{
 		btnLogin.click();
 	}

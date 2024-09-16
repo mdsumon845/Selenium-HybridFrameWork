@@ -29,6 +29,11 @@ public class CartPage extends BasePage{
 	@FindBy(xpath="//div[@id='entry_216842']//button[@title='Add to Cart'][normalize-space()='Add to Cart']") WebElement btnAddToCart;
 	@FindBy(xpath="//a[normalize-space()='View Cart']") WebElement btnViewCart;
 	@FindBy(xpath="//li[normalize-space()='Shopping Cart']") WebElement txtShoppingCart;
+	@FindBy(xpath="//table[@class='table table-bordered']//tbody//tr/td[4]//button[2]") 
+	List<WebElement> btnProductsRemove; 
+	@FindBy(xpath="(//p[text()='Your shopping cart is empty!'])[2]") WebElement textShoppingCartEmptyMgs;
+	
+	
 	
 	//action method
 	
@@ -101,5 +106,28 @@ public class CartPage extends BasePage{
 	public void clickCheckout() 
 	{
 		btnCheckOut.click();	
+	}
+	
+	public void clickOnRemoveBtn() throws Exception 
+	{
+		List<WebElement> removeableProducts=btnProductsRemove;
+		
+		for(WebElement removeProduct:removeableProducts) 
+		{
+			removeProduct.click();	
+			Thread.sleep(1000);
+		}
+	}
+	
+	public boolean getEmptyMessagsAfterRemovingProduct() 
+	{
+		try 
+		{
+			return textShoppingCartEmptyMgs.isDisplayed();
+		}catch(Exception e) 
+		{
+			return false;
+		}
+		
 	}
 }

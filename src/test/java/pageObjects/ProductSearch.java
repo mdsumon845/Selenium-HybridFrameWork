@@ -25,6 +25,12 @@ public class ProductSearch  extends BasePage{
 	WebElement locationLowPrice;
 	@FindBy(xpath="(//div[normalize-space()='Availability'])[2]") WebElement txtAvailability;
 	@FindBy(xpath="//div[@class='product-thumb']//div[@class='caption']//a") List<WebElement> searchResults;
+	@FindBy(xpath="//ul[@class='pagination']//li[@class='page-item']") List<WebElement> pageItem;
+//	@FindBy(xpath="//ul[@class='pagination']//a[text()='" + p + "']") WebElement linkPage;
+	@FindBy(xpath="//div[text()='Showing 1 to 15 of 75 (5 Pages)']") WebElement textpageNumber;
+	
+//	 driver.findElement(By.xpath("//ul[@class='ant-pagination ']//a[text()="+p+"]"));
+	
 	
 
 	//action method
@@ -88,4 +94,35 @@ public class ProductSearch  extends BasePage{
 			}		
 		}
 	}
+	
+	
+	public void scrollUptoPageNumberText() 
+	{
+		WebElement text=textpageNumber;
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", text);
+	}
+	public int totalpages() 
+	{
+		return  pageItem.size();
+		
+	}
+	
+	
+
+	  // Method to check if a specific page link is available
+    public boolean isPageLinkAvailable(int p) {
+        try {
+            WebElement page = driver.findElement(By.xpath("//ul[@class='pagination']//a[text()="+ p +"]"));
+            return page.isDisplayed();
+        } catch (Exception e) {
+            return false; // If there's an exception, the page link does not exist
+        }
+    }
+    
+    // Method to click on a specific page number
+    public void clickPage(int p) {
+        WebElement page = driver.findElement(By.xpath("//ul[@class='pagination']//a[text()="+p +"]"));
+        page.click();
+    }
 }

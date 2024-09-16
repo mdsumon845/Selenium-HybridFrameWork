@@ -31,7 +31,7 @@ public class TC_004_LoginDDT extends BaseClass{
 			LoginPage lp=new LoginPage(driver);
 			lp.SetEmail(email);
 			lp.SetPassword(pwd);
-			lp.clickLogin();
+			lp.clickLoginBtn();
 			//myAccountPage
 			MyAccountPage mypage=new MyAccountPage(driver);
 			boolean targetPage=mypage.isMyAccountPageExists();

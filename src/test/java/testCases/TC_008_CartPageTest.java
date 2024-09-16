@@ -62,5 +62,8 @@ public class TC_008_CartPageTest extends BaseClass{
 			logger.info("***Adding product to the Cart has finished...");
 		}		
 	}
+	
+	
+	
 }
 

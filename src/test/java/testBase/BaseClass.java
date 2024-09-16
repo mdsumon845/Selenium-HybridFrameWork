@@ -98,7 +98,7 @@ public class BaseClass {
 //		 driver.close();
 //	 }
 	
-	 //these user defined mehthods are created for generating random String,number,email,password
+	 //these user defined methods are created for generating random String,number,email,password
 	 public String randomString() 
 	 {
 		String generatedString= RandomStringUtils.randomAlphabetic(10);

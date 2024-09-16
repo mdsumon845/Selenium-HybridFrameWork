@@ -22,7 +22,7 @@ public class TC_003_LoginTest extends BaseClass{
 			LoginPage lp=new LoginPage(driver);
 			lp.SetEmail(p.getProperty("email"));
 			lp.SetPassword(p.getProperty("password"));
-			lp.clickLogin();
+			lp.clickLoginBtn();
 			//myAccountPage
 			logger.info("***Validating expected page ...");
 			MyAccountPage mypage=new MyAccountPage(driver);
