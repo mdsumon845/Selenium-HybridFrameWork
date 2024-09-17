@@ -57,6 +57,8 @@ public class MyAccountPage extends BasePage {
 	@FindBy(xpath="//input[@id='input-bank-account-number']") WebElement txtAccountNumber;
 	@FindBy(xpath="//input[@name='agree']") WebElement checkboxAgreeLink;
 	@FindBy(xpath="//a[normalize-space()='My Account']") WebElement linkMyAccount;
+	@FindBy(xpath="//a[normalize-space()='Wish List']") WebElement linkWishList;
+	
 
 	//action method
 	public boolean isMyAccountPageExists() 
@@ -326,5 +328,10 @@ public class MyAccountPage extends BasePage {
 		{
 			return false;
 		}
+	}
+	
+	public void clickOnWishListLink() 
+	{
+		linkWishList.click();
 	}
 }

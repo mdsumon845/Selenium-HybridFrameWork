@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-16T21:26:09 JST" name="Default suite" finished-at="2024-09-16T21:26:10 JST" duration-ms="84">
+  <suite started-at="2024-09-17T23:28:24 JST" name="Default suite" finished-at="2024-09-17T23:28:24 JST" duration-ms="114">
     <groups>
       <group name="Master">
-        <method signature="TC_0013_RemovingProductFromCartPage.verifyRemovingProductFromCart()[pri:1, instance:testCases.TC_0013_RemovingProductFromCartPage@38c6f217]" name="verifyRemovingProductFromCart" class="testCases.TC_0013_RemovingProductFromCartPage"/>
+        <method signature="TC_14_WishListFunctionalityTest.verifyWishListFunctionality()[pri:1, instance:testCases.TC_14_WishListFunctionalityTest@38c6f217]" name="verifyWishListFunctionality" class="testCases.TC_14_WishListFunctionalityTest"/>
       </group> <!-- Master -->
       <group name="Sanity">
-        <method signature="TC_0013_RemovingProductFromCartPage.verifyRemovingProductFromCart()[pri:1, instance:testCases.TC_0013_RemovingProductFromCartPage@38c6f217]" name="verifyRemovingProductFromCart" class="testCases.TC_0013_RemovingProductFromCartPage"/>
+        <method signature="TC_14_WishListFunctionalityTest.verifyWishListFunctionality()[pri:1, instance:testCases.TC_14_WishListFunctionalityTest@38c6f217]" name="verifyWishListFunctionality" class="testCases.TC_14_WishListFunctionalityTest"/>
       </group> <!-- Sanity -->
     </groups>
-    <test started-at="2024-09-16T21:26:09 JST" name="Default test" finished-at="2024-09-16T21:26:10 JST" duration-ms="84">
-      <class name="testCases.TC_0013_RemovingProductFromCartPage">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_0013_RemovingProductFromCartPage@38c6f217]" started-at="2024-09-16T21:26:09 JST" name="setup" finished-at="1970-01-01T09:00:00 JST" duration-ms="-1726489569967" status="FAIL">
+    <test started-at="2024-09-17T23:28:24 JST" name="Default test" finished-at="2024-09-17T23:28:24 JST" duration-ms="114">
+      <class name="testCases.TC_14_WishListFunctionalityTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_14_WishListFunctionalityTest@38c6f217]" started-at="2024-09-17T23:28:24 JST" name="setup" finished-at="1970-01-01T09:00:00 JST" duration-ms="-1726583304388" status="FAIL">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'os' is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\miahm\AppData\Local\Temp\testng-eclipse-996640859\testng-customsuite.xml]]>
+in C:\Users\miahm\AppData\Local\Temp\testng-eclipse--1475061348\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'os' is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\miahm\AppData\Local\Temp\testng-eclipse-996640859\testng-customsuite.xml
+in C:\Users\miahm\AppData\Local\Temp\testng-eclipse--1475061348\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:270)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
 at org.testng.internal.Parameters.createParameters(Parameters.java:700)
@@ -53,17 +53,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyRemovingProductFromCart()[pri:1, instance:testCases.TC_0013_RemovingProductFromCartPage@38c6f217]" started-at="2024-09-16T21:26:10 JST" name="verifyRemovingProductFromCart" finished-at="2024-09-16T21:26:10 JST" duration-ms="0" status="SKIP">
+        <test-method signature="verifyWishListFunctionality()[pri:1, instance:testCases.TC_14_WishListFunctionalityTest@38c6f217]" started-at="2024-09-17T23:28:24 JST" name="verifyWishListFunctionality" finished-at="2024-09-17T23:28:24 JST" duration-ms="0" status="SKIP">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'os' is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\miahm\AppData\Local\Temp\testng-eclipse-996640859\testng-customsuite.xml]]>
+in C:\Users\miahm\AppData\Local\Temp\testng-eclipse--1475061348\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'os' is required by BeforeClass on method setup but has not been marked @Optional or defined
-in C:\Users\miahm\AppData\Local\Temp\testng-eclipse-996640859\testng-customsuite.xml
+in C:\Users\miahm\AppData\Local\Temp\testng-eclipse--1475061348\testng-customsuite.xml
 at org.testng.internal.Parameters.createParams(Parameters.java:270)
 at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
 at org.testng.internal.Parameters.createParameters(Parameters.java:700)
@@ -92,8 +92,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyRemovingProductFromCart -->
-      </class> <!-- testCases.TC_0013_RemovingProductFromCartPage -->
+        </test-method> <!-- verifyWishListFunctionality -->
+      </class> <!-- testCases.TC_14_WishListFunctionalityTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

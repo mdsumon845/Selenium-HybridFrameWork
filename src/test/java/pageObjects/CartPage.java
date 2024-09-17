@@ -32,6 +32,8 @@ public class CartPage extends BasePage{
 	@FindBy(xpath="//table[@class='table table-bordered']//tbody//tr/td[4]//button[2]") 
 	List<WebElement> btnProductsRemove; 
 	@FindBy(xpath="(//p[text()='Your shopping cart is empty!'])[2]") WebElement textShoppingCartEmptyMgs;
+	@FindBy(xpath="//a[@aria-label='Wishlist']") WebElement btnWishList;
+	@FindBy(xpath="//li[normalize-space()='Shopping Cart']") WebElement textShoppingCart;
 	
 	
 	
@@ -129,5 +131,21 @@ public class CartPage extends BasePage{
 			return false;
 		}
 		
+	}
+	
+	public void clcikOnWishListBtn() 
+	{
+		btnWishList.click();
+	}
+	
+	public boolean getShoppingCartText() 
+	{
+		try 
+		{
+			return textShoppingCart.isDisplayed();	
+		}catch(Exception e) 
+		{
+			return false;
+		}
 	}
 }

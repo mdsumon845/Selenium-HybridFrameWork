@@ -2,6 +2,7 @@ package pageObjects;
 
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,6 +18,11 @@ public class ProductPage extends BasePage {
 	//locators
 	
 	@FindBy(xpath="//div[@class='product-thumb']//div[@class='caption']//a") List<WebElement> searchResults;
+	@FindBy(xpath="(//a[text()='Palm Treo Pro'])") WebElement textPalm;
+	
+	@FindBy(xpath="(//button[@title='Add to Wish List'])[1]") WebElement btnWishList;
+	@FindBy(xpath="//a[@class='btn btn-danger btn-block']") WebElement btnLogin;
+	
 	
 	//action method
 	public void searchResults() 
@@ -64,4 +70,30 @@ public class ProductPage extends BasePage {
 			}
 		}
 	}	
+	
+	public void scrollUptoProductIsAvailable() 
+	{
+		WebElement textpaml=textPalm;
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", textpaml);	
+	}
+	public void clickOnWishListBtn() 
+	{
+		List<WebElement> results=searchResults;
+		for(WebElement result:results) 
+		{
+			String res=result.getText();
+			System.out.println(res);
+				
+			if(res.equals("Palm Treo Pro") )	
+			{
+				btnWishList.click();		
+			}
+		}
+	}
+	
+	public void clickOnLoginBtn() 
+	{
+		btnLogin.click();
+	}
 }
